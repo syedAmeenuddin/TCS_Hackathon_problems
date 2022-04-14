@@ -9,7 +9,8 @@ tcsion hackathon python problems solution
 
 4.def  check_prime
 
-5.def occ(l,e):
+5.def occ(l,e)
+
 6.#During the COVID19 pandemic, the status of beds availability is to be tracked
 
 Create a class City with the below attributes:

@@ -2,14 +2,17 @@
 tcsion hackathon python problems solution 
 
 1.How to create a class
+_____________________________________________________________________________________
 
 2.palindrome
+______________________________________________________________________________________
 
 3.def find_Novowels
-
+_____________________________________________________________________________________
 4.def  check_prime
-
+_____________________________________________________________________________________
 5.def occ(l,e)
+_____________________________________________________________________________________
 
 6.#During the COVID19 pandemic, the status of beds availability is to be tracked
 
@@ -32,5 +35,94 @@ city_name represents the city name
 '103', 'Telangana', 'Warangal', '100000', '30000', '2000', '1000',
 '104', 'AndhraPradesh', 'Vijayawada', '800000', '300000', '30000', '2500',
 '105', 'AndhraPradesh','Vizag','500000','100000','6000','1000','AndhraPradesh'
+
+
+question :
+During the COVID19 pandemic, the status of beds availability is to be tracked
+
+Create a class City with the below attributes:
+city_id of type Number
+state_name of type String
+city_name of type String
+covidbeds of type Number
+avlblcovbeds of type Number
+ventilbeds of type Number
+avlblventilbeds of type Number
+
+
+Attribute description:
+city_id represents Unique ID for the city
+state_name represents the state name
+city_name represents the city name
+
+covidbeds represents the total covid beds in the city
+avlblcovbeds represents the total available covid beds in the city
+ventilbeds represents the total ventilator beds in the city
+avlblventilbeds represents the total available ventilator beds in the city
+
+
+Create the __init__ method which takes all parameters in the above sequence. The method should set the value of attributes to parameter values .
+
+Create another class CovBedsAnalysis with the below attributes:
+analysis_name of type String
+city_list of type List having city objects
+
+Create the __init__ method which takes all parameters in the above sequence. The method should set the value of attributes to parameter values inside the method.
+
+Create another method inside the class with the name get_StateWiseAvlblBedStats
+
+This method is used to find the state wise available covid beds and available ventilator beds and returns a list of tuples with State name,total available covid beds and total available ventilator beds for each state, sorted by state name.
+
+
+Note: A state contains multiple cities. Total number of available beds for a respective category (covid or ventilator beds) in a state is the sum of the available beds of all the cities in that state for the respective category(covid or ventilator). Refer testcase output for more clarity.
+
+
+Create another method with the name get_CiitesWithMoreThanAvgOccupiedbeds, which takes state as argument and returns the dictionary with city as the key and tuple of occupied covid beds and occupied ventilator beds as value, where number of covid beds occupied and ventilator beds occupied are more than the state average for the respective category of beds .
+
+
+i.e. the City(cities) in the given state to be recorded/resulted( with the data mentioned), should satisfy the below conditions:
+
+Whose occupied covid beds count is more than the "average of Occupied covid beds of all the cities of the given state" and the respective City should also contain the Occupied ventilator beds count more than the "average of occupied ventilator beds of all cities of the given state".
+
+For more clarity , please refer the Sample test case Input and Output in below section
+
+If no city is found with the occupied beds more than state average as mentioned above, then return None and display ‘No city available' (Without quotes) in main function.
+
+
+Please note that the search operations(if any as per the requirement ..) should be case insensitive.
+
+Instructions to write main function:
+
+Instructions to write main section of the code
+a. You would require to write the main section completely, hence please follow the below instructions for the same.
+b. You would require to write the main program which is inline to the "sample input description section" mentioned below and to read the data in the same sequence.
+c. Create the respective objects(City and CovBedsAnalysis ) with the given sequence of arguments to fulfill the __init__ method requirement defined in the respective classes referring to the below instructions.
+
+i. Create a City object after reading the data related to it and add the object to the list of city objects which will be provided to the CovBedsAnalysis object while creation.
+This point repeats for the number of city objects(considered in the first line of input data) .
+
+ii. Create CovBedsAnalysis object by passing the CovBedsAnalysis name(you can hard-code any name you want) and List of city objects ( created as mentioned in above
+point# c.i ) as the arguments.
+d. Take a string value as input depicting the state which is passed to the get_CiitesWithMoreThanAvgOccupiedbeds
+e. Call the method get_StateWiseAvlblBedStats mentioned above from the main section.
+f. Display the State,total available covid beds and total available ventilator beds received from the method, with a single space in between as shown in sample testcase output,
+g. Call the method get_CiitesWithMoreThanAvgOccupiedbeds mentioned above from the main section
+h. Display the city name, occupied covid beds and occupied ventilator beds with a single space in between as shown in the sample testcase output.
+I. If None is returned by the method get_CiitesWithMoreThanAvgOccupiedbeds, display the message ‘No city available' (excluding the quotes).
+
+
+You can use/refer the below given sample input and output to verify your solution using ' Test against Custom Input ' option in Hackerrank.
+
+
+Input format for Custom Testing:
+
+a.The 1st input taken in the main section is the number of city objects to be added to the list of cities.
+b.The next set of inputs are the values for the attribtes: city_id,state_name,city_name, covidbeds,avlblcovbeds,ventilbeds,avlblventilbeds respectively for each city taken one after other and is repeated for number of objects given in the first line of testcase input
+c.The last line of input refers the state name which is passed to the function: get_CiitesWithMoreThanAvgOccupiedbeds
+
+
+
+____________________________________________________________________________________________________________________________________________________
+
 
 7.
